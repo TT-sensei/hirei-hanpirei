@@ -1,0 +1,30 @@
+/* タブレット優先の調整。大きなボタンと読みやすい文字を保つ。 */
+@media (min-width: 900px) {
+  .park-container { max-width: 1060px; }
+  .home-hero h1 { font-size: 2.2rem; }
+  .home-hero img { width: 250px; }
+  .q-prompt { font-size: 1.6rem; }
+  .choice-btn { min-height: 88px; font-size: 1.5rem; }
+  .choice-btn svg { width: 168px; }
+  .mode-btn { min-height: 118px; }
+  .mode-btn b { font-size: 1.45rem; }
+  .kind-btn { min-height: 92px; font-size: 1.3rem; }
+  table.q-table { font-size: 1.45rem; }
+  .graph-box svg { width: 400px; }
+}
+
+@media (max-width: 720px) {
+  .home-hero { flex-direction: column; text-align: center; }
+  .home-hero img { max-width: 70%; }
+  .mode-grid { grid-template-columns: 1fr; }
+  .kind-grid { grid-template-columns: repeat(3, 1fr); }
+  .tool-grid { grid-template-columns: 1fr; }
+  .answer-grid { grid-template-columns: 1fr; }
+  .q-top { flex-direction: column; align-items: center; text-align: center; }
+  .q-meta { justify-content: center; }
+  .feedback { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
