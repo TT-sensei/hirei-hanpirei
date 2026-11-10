@@ -375,3 +375,139 @@ footer.park-footer { text-align: center; color: var(--edu-muted); padding: 18px;
   .park-app .park-main { padding-top: 10px; padding-bottom: 14px; }
   .park-app footer.park-footer { padding: 8px 10px; }
 }
+
+
+/* ---------- 解く画面：高さに合わせて配置を最適化 ---------- */
+/* 問題文・出題内容・選択肢の構成は維持し、上下の余白とナビ画像を整理する。 */
+@media (min-width: 680px) and (max-height: 850px) {
+  .park-container:has(> .session-head) {
+    max-width: 1120px;
+  }
+  .park-container:has(> .session-head) > .session-head {
+    margin-bottom: 7px;
+    gap: 10px;
+  }
+  .park-container:has(> .session-head) .session-head .mode-name {
+    font-size: .98rem;
+  }
+  .park-container:has(> .session-head) > .q-card {
+    padding: 13px 18px 15px;
+    border-radius: 20px;
+  }
+  .park-container:has(> .session-head) .q-top {
+    align-items: center;
+    gap: 12px;
+  }
+  .park-container:has(> .session-head) .q-navi {
+    width: 62px;
+    height: 62px;
+  }
+  .park-container:has(> .session-head) .q-meta {
+    margin-bottom: 4px;
+    gap: 6px;
+  }
+  .park-container:has(> .session-head) .chip {
+    padding: 3px 9px;
+    font-size: .78rem;
+  }
+  .park-container:has(> .session-head) .q-prompt {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+  .park-container:has(> .session-head) .q-navi-comment {
+    margin-top: 3px;
+    font-size: .86rem;
+  }
+  .park-container:has(> .session-head) .q-visual {
+    margin: 8px 0 2px;
+  }
+  .park-container:has(> .session-head) .graph-box {
+    padding: 4px;
+    border-radius: 14px;
+  }
+  .park-container:has(> .session-head) .graph-box svg {
+    width: min(300px, 34vh);
+    max-height: 34vh;
+  }
+  .park-container:has(> .session-head) table.q-table {
+    font-size: 1.15rem;
+  }
+  .park-container:has(> .session-head) table.q-table th,
+  .park-container:has(> .session-head) table.q-table td {
+    padding: 6px 14px;
+    min-width: 48px;
+  }
+  .park-container:has(> .session-head) .answer-grid {
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .park-container:has(> .session-head) .choice-btn {
+    min-height: 58px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 1.18rem;
+  }
+  .park-container:has(> .session-head) .choice-btn svg {
+    width: 126px;
+  }
+  .park-container:has(> .session-head) .mini-table {
+    font-size: .94rem;
+  }
+  .park-container:has(> .session-head) .mini-table th,
+  .park-container:has(> .session-head) .mini-table td {
+    padding: 3px 9px;
+  }
+  .park-container:has(> .session-head) .feedback {
+    margin-top: 9px;
+    padding: 10px 13px;
+    gap: 10px;
+    border-radius: 15px;
+  }
+  .park-container:has(> .session-head) .feedback img {
+    width: 52px;
+    height: 52px;
+  }
+  .park-container:has(> .session-head) .feedback .fb-title {
+    margin-bottom: 3px;
+    font-size: 1.1rem;
+  }
+  .park-container:has(> .session-head) .feedback p {
+    margin-bottom: 2px;
+    font-size: .9rem;
+    line-height: 1.45;
+  }
+  .park-container:has(> .session-head) .next-row {
+    margin-top: 8px;
+  }
+  .park-container:has(> .session-head) .big-btn {
+    min-height: 48px;
+    padding: 9px 26px;
+    font-size: 1.05rem;
+  }
+}
+
+/* 画面の高さが特に小さいときだけ、グラフとカード間隔をもう一段調整。 */
+@media (min-width: 680px) and (max-height: 700px) {
+  .park-container:has(> .session-head) > .q-card {
+    padding: 9px 15px 11px;
+  }
+  .park-container:has(> .session-head) .q-navi {
+    width: 52px;
+    height: 52px;
+  }
+  .park-container:has(> .session-head) .q-prompt {
+    font-size: 1.15rem;
+  }
+  .park-container:has(> .session-head) .graph-box svg {
+    width: min(260px, 30vh);
+    max-height: 30vh;
+  }
+  .park-container:has(> .session-head) .choice-btn {
+    min-height: 52px;
+    padding: 6px 10px;
+  }
+  .park-container:has(> .session-head) .feedback img {
+    width: 44px;
+    height: 44px;
+  }
+}
